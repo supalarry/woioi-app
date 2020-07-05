@@ -8,7 +8,7 @@ Learn languages through songs. For now, it is suited for English speakers that w
 
 ![alt text](https://i.imgur.com/xuKQsZb.jpg)
 
-It is possible to register and also login
+It is possible to register and also login. Once registered or logged in, client receives JWT refresh token and JWT access token. Refresh token is stored in a cookie, but access token is stored in memory. For each request user sends access token, and refresh token is used to get new access token on page reload, after access token expires (15 minutes) etc. This is extra security layer.
 
 ![alt text](https://i.imgur.com/bJvbseM.jpg)
 
