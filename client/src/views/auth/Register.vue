@@ -11,7 +11,6 @@
               <div class="py-2 mb-2 text-white bg-red-600 rounded-sm" v-if="errorMessage">{{this.errorMessage}}</div>
               <div class="py-2 mb-2 text-white bg-green-600 rounded-sm" v-if="successSignUp">{{this.successMessage}}</div>
               <input v-model="user.username" type="text" class="w-full px-2 py-1 mb-2 border-2 rounded-md" placeholder="username" required>
-              <input v-model="user.mainLang" type="text" class="w-full px-2 py-1 mb-2 border-2 rounded-md" placeholder="language you speak" required>
               <input v-model="user.email" type="email" class="w-full px-2 py-1 mb-2 border-2 rounded-md" placeholder="email" required>
               <input v-model="user.password" type="password" class="w-full px-2 py-1 mb-2 border-2 rounded-md" placeholder="password" required>
               <input v-model="user.confirmPassword" type="password" class="w-full px-2 py-1 mb-4 border-2 rounded-md" placeholder="confirm password" required>
@@ -29,9 +28,6 @@ import { setAccessToken } from '@/auth/accessToken';
 
 const userSchema = Joi.object().keys({
   username: Joi.string().regex(/^[a-zA-Z0-9_]+$/).trim().min(1)
-    .max(30)
-    .required(),
-  mainLang: Joi.string().regex(/^[a-zA-Z]+$/).trim().min(1)
     .max(30)
     .required(),
   email: Joi.string().regex(/^\S+@\S+\.\S+$/).trim()
@@ -57,7 +53,6 @@ export default {
         email: '',
         password: '',
         confirmPassword: '',
-        mainLang: '',
       },
     };
   },

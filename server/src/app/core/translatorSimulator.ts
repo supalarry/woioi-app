@@ -17,7 +17,6 @@ export const translateWord = async (word: string, to:string): Promise<string> =>
 const unsplashAccessKey = 'obgU8UQBD7rz30WzgiCvcHGO-0otvF4E6RP_0_WhGnU';
 
 export const getImageUrl = async (word: string): Promise<string> => {
-  return "https://source.unsplash.com/random";
   const unslpashApiUrl = `https://api.unsplash.com/search/photos/?client_id=${unsplashAccessKey}&query=${word}&page=1&per_page=1`;
   // console.log(unslpashApiUrl);
   const response = await axios.get(unslpashApiUrl);
