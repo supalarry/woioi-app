@@ -12,7 +12,7 @@ It is possible to register and also login
 
 ![alt text](https://i.imgur.com/bJvbseM.jpg)
 
-Then, let's say you want to understand lyrics of a song in Russian. You input song's name, artist and lyrics
+Then, let's say you want to understand lyrics of a song in Russian. You input song's name, artist and lyrics. The language is automatically detected.
 
 ![alt text](https://i.imgur.com/nMvzbvt.jpg)
 
