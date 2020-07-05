@@ -2,6 +2,8 @@
 
 This is a personal pet project.
 
+## Overview
+
 Learn languages through songs. For now, it is suited for English speakers that want to learn an another language.
 
 ![alt text](https://i.imgur.com/xuKQsZb.jpg)
@@ -26,9 +28,32 @@ Finally, you can also search songs
 
 ![alt text](https://i.imgur.com/WC7ydMT.jpg)
 
-Technologies used:
-client - html, css + tailwindcss microframework, javascript + vue.js, apollo client for graphql, vuex for storage
-server - nodejs + express, typescript, apollo for graphql, type-graphql, elasticsearch, postgresql
+## Technologies used
+### client
+html
+
+css + tailwindcss microframework
+
+javascript + vue.js
+
+apollo client for graphql
+
+vuex for storage
+
+### server
+nodejs + express
+
+typescript
+
+apollo for graphql
+
+type-graphql
+
+typeorm (ORM)
+
+elasticsearch
+
+postgresql
 
 TODO:
 dockerize app. otherwise, to run it you must have elasticsearch and postgresql running on your machine
