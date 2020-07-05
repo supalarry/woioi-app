@@ -18,7 +18,7 @@ You now have original lyrics decoupled into individual words that you can click,
 
 ![alt text](https://i.imgur.com/YFgDQyR.png)
 
-Just click on the word you want to understand.
+You also have in smaller text the translation of the whole sentence.
 
 ![alt text](https://i.imgur.com/irlfJoi.png)
 
