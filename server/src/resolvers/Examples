@@ -1,0 +1,41 @@
+
+@Query(() => String) 2. schema defines that hello returns string
+hello(): string { 1. user can call hello query
+  return 'hi'; 3. resolvers query hello then returns hi
+}
+
+
+Because User.ts entity has been registered as a type,
+it is possible to use User type in the graphql schema
+@Query(() => [User])
+users() {
+  return User.find();
+}
+
+
+Allow return to be null
+Ctx gives access to context we created in index.ts
+@Query(() => User, {nullable: true})
+me(@Ctx() context: AppContext) {
+    const authorization = context.req.headers['authorization'];
+    if (!authorization) {
+        return null;
+    }
+    try {
+        const token = authorization.split(' ')[1];
+        const payload: any = verify(token, process.env.ACCESS_TOKEN_SECRET!);
+        return User.findOne(payload.userId);
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+}
+
+@Query(() => String)
+Protect the route using a middleware
+Middlewares run before the resolver
+
+@UseMiddleware(isAuth)
+bye(@Ctx() { payload }: AppContext) {
+    return `your user id is: ${payload!.userId}`;
+}
